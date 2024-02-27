@@ -1,0 +1,53 @@
+﻿@model WebApplicationOnAzure.Models.Student
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SId" class="control-label"></label>
+                <input asp-for="SId" class="form-control" />
+                <span asp-validation-for="SId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SName" class="control-label"></label>
+                <input asp-for="SName" class="form-control" />
+                <span asp-validation-for="SName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SClass" class="control-label"></label>
+                <input asp-for="SClass" class="form-control" />
+                <span asp-validation-for="SClass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SAge" class="control-label"></label>
+                <input asp-for="SAge" class="form-control" />
+                <span asp-validation-for="SAge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SAddress" class="control-label"></label>
+                <input asp-for="SAddress" class="form-control" />
+                <span asp-validation-for="SAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
